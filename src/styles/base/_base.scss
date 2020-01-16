@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    //1 rem = 10px  10px/16px=62.5% width=1200-1800px
+    font-size: 62.5%;
+
+    @include response(tab-land){ //width<1200px (900-1200px)
+        font-size:56.25%; //1rem=9px 9px/16px=56.25%
+    }
+
+    @include response(tab-port){ //width<900px (600-900px)
+        font-size: 50%; //1rem=8px 8px/16px=50%
+    }
+
+    @include response(phone){
+        font-size: 44%; //1rem=7px 7px/16px=44% (360-600px)
+    }
+    @include response(big-desktop){//width> 1800px ?
+        font-size: 75%; //1rem=12px 12/16=
+    }
+}
+
+body{
+    box-sizing: border-box;
+}

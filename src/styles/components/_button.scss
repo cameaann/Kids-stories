@@ -1,0 +1,60 @@
+.btn{
+
+    padding:.5rem 1rem;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:$dark-green;
+    border:none;
+    
+    &,
+    &:link,
+    &:visited{
+        transition: all .2s;
+    }    
+
+  
+    &:disabled{
+        background-color: $light-grey;
+    }
+
+    &:enabled{
+        cursor: pointer;
+        background-color: $medium-green;
+        color: white;
+
+    }
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        &:not(:disabled){
+            background-color: $medium-green2;
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba($black-color, .2);
+
+            &:active,
+            &:focus{
+                outline:none;
+                transform: translateY(3px);
+                box-shadow: 0 .5rem 1rem rgba($black-color, .2);
+
+                &::after{
+                    transform: translateY(0);
+                    outline:none;
+                }
+            }
+            
+        
+        }       
+    }
+
+ 
+
+
+
+
+}

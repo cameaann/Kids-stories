@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/css/ng-classes.css",
+              "src/styles/main.scss"
             ],
             "scripts": []
           },
