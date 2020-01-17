@@ -1,13 +1,13 @@
 <div class="main_content">
         <div class="form_container">
-            <form [formGroup]="postForm" autocomplete="off" novalidate (ngSubmit) = onSubmit() class="form">
-                <textarea type="text" class="form__input" formControlName = "postContent" required></textarea>
+            <form [formGroup]="storyForm" autocomplete="off" novalidate (ngSubmit) = onSubmit() class="form">
+                <textarea type="text" class="form__input" formControlName = "storyContent" required></textarea>
                 
-                <button type="submit" class="btn btn-post" [disabled] = "!postForm.valid"  >Создать</button>
+                <button type="submit" class="btn btn-post" [disabled] = "!storyForm.valid"  >Создать</button>
             </form>
         </div>           
         <div class="form_container">
-            <app-post class="postBox" *ngFor = "let post of posts" [post] = "post"></app-post> 
+            <app-story class="storyBox" *ngFor = "let story of stories" [story] = "story"></app-story> 
         </div>
         
     

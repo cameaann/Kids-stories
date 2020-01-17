@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-import { PostsService } from 'src/app/services/posts.service'
-import { Post } from 'src/app/model/post';
-import { PostComponent } from '../post/post.component';
+import { PostsService } from 'src/app/services/story.service'
+import { Story } from 'src/app/model/story';
+import { StoryComponent } from '../story/story.component';
 
 @Component({
   selector: 'app-content',
@@ -11,28 +11,25 @@ import { PostComponent } from '../post/post.component';
 })
 export class ContentComponent implements OnInit {
 
-  postForm: FormGroup;
+  storyForm: FormGroup;
 
-  posts = [];
+  stories = [];
   
   constructor(private PostsService: PostsService) { }
 
   ngOnInit() {
-    this.postForm = new FormGroup({
-      postContent: new FormControl("", Validators.minLength(10))
+    this.storyForm = new FormGroup({
+      storyContent: new FormControl("", Validators.minLength(10))
     });
   }
 
   onSubmit(): void{
 
-    var entry = new PostComponent();
-
-
-    this.posts.push(this.postForm.value);
-    var postDate = new Date();
-    console.log(postDate);
-    console.log(this.posts);
-    console.log(this.postForm.value);
+    this.stories.push(this.storyForm.value);
+    var storyDate = new Date();
+    console.log(storyDate);
+    console.log(this.stories);
+    console.log(this.storyForm.value);
   }
 
 }

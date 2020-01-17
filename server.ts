@@ -10,9 +10,13 @@ const app: Application = express();
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('Hello World');
+  });
+
 app.route('/api/stories').get(getAllStories);
 
-app.route('/api/stories/:id').put(saveStory);
+// app.route('/api/stories/:id').put(saveStory);
 
 
 

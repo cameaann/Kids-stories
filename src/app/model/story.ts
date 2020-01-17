@@ -1,6 +1,6 @@
-export interface Post {
+export interface Story {
     id:number,
-    createdAt: Date,
+    data: Date,
     title: string,
     content:string
 }
