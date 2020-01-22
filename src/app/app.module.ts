@@ -12,6 +12,7 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { StoryComponent } from './story/story.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

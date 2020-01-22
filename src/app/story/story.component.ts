@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Story } from 'src/app/model/story'
+import { StoryService } from '../services/story.service';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-story',
@@ -7,15 +9,16 @@ import { Story } from 'src/app/model/story'
   styleUrls: ['./story.component.scss']
 })
 export class StoryComponent implements OnInit {
-
   
   @Input()
-  story:Story
+  story:Story;
 
 
-  constructor() { }
+  constructor(private storyService: StoryService) { }
 
   ngOnInit() {
+
+    console.log(this.storyService)
   }
 
 }
