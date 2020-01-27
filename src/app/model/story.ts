@@ -1,6 +1,6 @@
 export interface Story {
-    id:number,
+    // id:number,
     data: Date,
-    title: string,
+    // title: string,
     content:string
 }

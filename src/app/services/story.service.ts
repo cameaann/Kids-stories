@@ -15,10 +15,9 @@ export class StoryService {
     return this.http.get<Story[]>('/api/stories');
   }
 
-  saveStory(story: Story):Observable<any>{
-    
+  saveStory(story: Story): Observable<any>{
     return this.http.post<Story>(`/api/stories`, story);
-  
+    
   }
   
 }
