@@ -26,14 +26,16 @@ export class ContentComponent implements OnInit {
     this.stories$ = this.storyService.loadStories();    
 
     this.storyForm = new FormGroup({
-      storyContent: new FormControl("", Validators.minLength(10)),
+      story_content: new FormControl("", Validators.minLength(10)),
       date: new FormControl(new Date())
     });
   }
 
   onSubmit(): void{    
     this.storyService.saveStory(this.storyForm.value).subscribe(
-      () => console.log("Story saved!")
+      () => this.ngOnInit()
+      
+      // console.log("Story saved!")
     );
     // console.log(story);
     // console.log(this.storyForm.value);
