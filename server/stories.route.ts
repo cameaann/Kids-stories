@@ -30,6 +30,7 @@ export function getAllStories(req: Request, res: Response) {
                         files_array[index] = story;
                         count--;
                         if (count === 0) {
+                            files_array.sort(sortFunction);
                             callback(null, files_array);
                         }
                     });
@@ -48,6 +49,12 @@ export function getAllStories(req: Request, res: Response) {
         return res.status(200).json(result);
     });
 
+    function sortFunction(a,b){  
+        var dateA = new Date(a.date).getTime();
+        var dateB = new Date(b.date).getTime();
+        return dateA < dateB ? 1 : -1;  
+    }; 
+
 
 }
 
@@ -62,8 +69,7 @@ export function saveStory(req: Request, res: Response) {
         }
 
         console.log("Story was written to file");
-        
-        return res.status(200).json(story);
+         return res.status(200).json(story);
     });
 
 }

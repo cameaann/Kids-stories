@@ -18,7 +18,8 @@ export class StoryComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(this.storyService)
+    // console.log(this.storyService)
+    // console.log(this.story);
   }
 
 }
