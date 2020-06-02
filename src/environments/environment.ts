@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBehLO8kCGm04hrWh2RB3VTmoIKMA7SV8Q",
+    authDomain: "kids-stories-blog.firebaseapp.com",
+    databaseURL: "https://kids-stories-blog.firebaseio.com",
+    projectId: "kids-stories-blog",
+    storageBucket: "kids-stories-blog.appspot.com",
+    messagingSenderId: "703027604560",
+    appId: "1:703027604560:web:0ee9307ad0e6488e3b7555",
+    measurementId: "G-5E4GB0TGV3"
+  }
 };
 
 /*

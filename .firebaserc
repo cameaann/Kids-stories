@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kids-stories-blog": {
+      "hosting": {
+        "blog": [
+          "kids-stories-blog"
+        ]
+      }
+    }
+  }
+}

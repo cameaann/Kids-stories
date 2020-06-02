@@ -2,4 +2,6 @@
     <h2 class="story__title">{{story.story_content.slice(0, 30)}} <span>{{story.date | date}}</span></h2>
     
     <div class="story__content">{{story.story_content}}</div>
+    <button class="btn btn-edit" ngClick = edit()>Редактировать</button>
+    <button class="btn btn-delete" ngClick = delete()>Удалить</button>
 </div>

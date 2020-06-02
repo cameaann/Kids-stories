@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Story } from 'src/app/model/story'
+import { Story } from 'src/app/model/story';
 import { StoryService } from '../services/story.service';
 import { EventEmitter } from '@angular/core';
 
@@ -20,6 +20,13 @@ export class StoryComponent implements OnInit {
 
     // console.log(this.storyService)
     // console.log(this.story);
+  }
+  edit(){
+    
+  }
+
+  delete(){
+
   }
 
 }
