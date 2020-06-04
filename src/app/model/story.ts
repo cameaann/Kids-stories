@@ -1,6 +1,7 @@
 export interface Story {
-    // id:number,
-    data: Date,
-    // title: string,
-    content:string
+    id: string;
+    date: Date,
+    title: string,
+    content:string,
+    author: string
 }
