@@ -1,3 +1,5 @@
+@import '../abstracts/mixins';
+
 .form{
     display:flex;
     flex-direction: column;
@@ -12,7 +14,19 @@
      background-color: $light-grey;
      border:none;
      margin-bottom: 1.5rem;
-     
+
+     &__title{
+        width:40rem;
+        height:5rem;
+        align-self: flex-start;
+     }
+
+     &__author{
+        width:40rem;
+        height:5rem;
+        align-self: flex-start;
+     }   
+
 
      &:focus{
          border-radius: 2rem;
@@ -21,7 +35,17 @@
          outline: none;
      }
     
+        @include response(phone-moto){
+            width:20rem;
+            padding: 1.25rem 2rem;
+            }
+    
     }
+        @include response(phone){
+            align-items: flex-start;
+        }
+
+    
 
 }
 

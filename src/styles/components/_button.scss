@@ -46,14 +46,12 @@
                     transform: translateY(0);
                     outline:none;
                 }
-            }
-            
-        
+            }          
         }       
     }
 
     &-edit, &-delete{
-        float:right;
+        // flex: start;
     }
 
 

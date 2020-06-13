@@ -1,13 +1,30 @@
 <div class="header">
-    <div class="container">
-        <div class="logobox">
-            <a href="#" class="logo_link">
-                <img class="logo-img" src="assets/img/logo2.png" alt="">
-                <!-- <img class="logo-img" src="assets/img/sashacat.svg" alt=""> -->
-            </a>
-        </div>
-        <div class="blog-title">
-            <h1 class="primary-heading">Детские рассказы</h1>
-        </div>
-    </div>    
+    <div class="header__container">
+      <div class="header__logobox">
+        <a href="#" class="logo_link">
+            <img class="logo-img" src="assets/img/logo2.png" alt="">
+            <!-- <img class="logo-img" src="assets/img/sashacat.svg" alt=""> -->
+        </a>
+    </div>
+    <div class="header__blog-title">
+        <h1 class="primary-heading">Детские рассказы</h1>
+    </div>
+    </div> 
+    <div class="header__nav">
+      <ul class="header__navigation-items">
+        <li *ngIf="!isAuth">
+          <a routerLink="/signup">Signup</a>
+        </li>
+        <li *ngIf="!isAuth">
+          <a routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="isAuth">
+          <a routerLink="/training">Training</a>
+        </li>
+        <li *ngIf="isAuth">
+          <a style="cursor: pointer" (click)="onLogout()">Logout</a>
+        </li>
+      </ul> 
+    </div>
+           
 </div>

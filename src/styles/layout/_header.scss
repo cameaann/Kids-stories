@@ -1,37 +1,79 @@
 // @import "abstracts/mixins";
 
 .header{
-   background-color: $light-grey;
-}
-
-.container{
-    width:90rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    background-color: $light-grey;
     padding: 2rem;
-    margin: 0 auto;
-  
-}
 
-.logobox{
     display: flex;
-    margin-right:20rem;
+    justify-content: space-around;
     align-items: center;
-    
-}
 
-.logo-link{
-    
-}
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
 
+        
+
+    }
+
+    &__logobox{
+    
+    }
+
+    &__logo-link{
+    
+    }
+
+    &__blog-title{
+       
+    }
+
+    &__nav{
+        display:flex;
+        justify-content: flex-end;
+    }
+    
+    &__navigation-items{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        font-size: 2rem;
+        
+        a {
+            text-decoration: none;
+            }
+        
+        @include response(tab-land){
+            flex-direction: row;
+
+            a {
+                margin-right: 2.5rem;
+                }
+        }
+
+            
+    }
+    @include response(tab-land){
+        display: block;
+    }
+        
+}
 .logo-img{
     width:10rem;
-    height:10rem;
-    
+    height:10rem; 
+
+    @include response(phone){
+        margin-right: 3rem;
+    }
+    @include response(moto-phone){
+        margin-right: 0;
+    }
 }
 
-.blog-title{
-    display: flex;
-    align-items: center;
-}
+
+
+
+
+

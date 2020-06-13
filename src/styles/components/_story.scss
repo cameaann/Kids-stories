@@ -1,20 +1,30 @@
-.storyBox{
-    
-    width:130rem;
-    margin:5rem auto;
-}
-
 .story{
     font-size: 2.5rem;
-    padding: .5rem;
-    width:60rem;
     margin-bottom: 10rem;
+    padding:2rem;
 
+    // &:not(:last-child){
+        // border-bottom: 1px solid grey;
+    // }
+    
+    
     &__title{
         font-size: 2.8rem;
     }
 
     &__content{
-        // margin-bottom:2rem;
+        
+    }
+
+    @include response(phone){
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
+    }
+
+    @include response(tab-port){
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
     }
 }

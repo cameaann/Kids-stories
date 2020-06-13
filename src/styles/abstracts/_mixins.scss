@@ -27,7 +27,7 @@
 
 
 @mixin response($breakpoint){
-    @if $breakpoint == photo-moto{
+    @if $breakpoint == phone-moto{
         @media screen and (max-width:22.5em) {@content;}//360px
     }
     @if $breakpoint == phone{

@@ -1,0 +1,13 @@
+<div class="form_container" >
+    <form [formGroup]="storyForm" autocomplete="off" novalidate (ngSubmit) = onSubmit() class="form">
+        <label for="title">Название
+        <textarea type="text" class="form__title" formControlName = "title" name= "title" required></textarea>
+        </label>
+        <textarea type="text" class="form__input" formControlName = "content" required></textarea>
+        <label for="title">Автор
+        <textarea type="text" class="form__author" formControlName = "author">Автор</textarea>
+        </label>
+        <button type="submit" class="btn btn-post" [disabled] = "!storyForm.valid">Создать</button>
+    </form>
+</div>
+<app-footer></app-footer>

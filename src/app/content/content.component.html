@@ -1,17 +1,8 @@
 <div class="main_content">
-        <div class="form_container">
-            <form [formGroup]="storyForm" autocomplete="off" novalidate (ngSubmit) = onSubmit() class="form">
-                <textarea type="text" class="form__input" formControlName = "story_content" required></textarea>
-                
-                <button type="submit" class="btn btn-post" [disabled] = "!storyForm.valid">Создать</button>
-            </form>
-        </div>
-        <!-- <div class="form_container" *ngIf='myStories$'>
-            <app-story class="storyBox" *ngFor = "let story of myStories$"  [story] = "story"></app-story> 
-        </div> -->
-
-        <div class="form_container" *ngIf='stories$ | async as stories'>
+    <div class="stories_section">
+        <div class="stories_container" *ngIf='stories$ | async as stories'>
             <app-story class="storyBox" *ngFor = "let story of stories"  [story] = "story"></app-story> 
-        </div>    
-
-</div>
+        </div>
+     </div>       
+ </div>
+ <app-footer></app-footer>
