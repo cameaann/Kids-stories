@@ -1,51 +1,105 @@
 @import '../abstracts/mixins';
 
+.form_container{
+  padding:2rem;   
+}
+
 .form{
     display:flex;
+    margin: 0 auto;
+    width:50%;
     flex-direction: column;
-    align-items: flex-end;
-    
-
+    align-items: flex-start;
+   
     &__input{
-     width:40rem;
-     height:20rem;
-     padding: 1.5rem 2rem;
-     border-radius: 2rem;
-     background-color: $light-grey;
-     border:none;
+        height:20rem;       
+    }
+
+    &__input,
+    &__title,
+    &__author{
+     padding: 1rem 2rem;
+     border: 1px solid $medium-grey;
      margin-bottom: 1.5rem;
-
-     &__title{
-        width:40rem;
-        height:5rem;
-        align-self: flex-start;
-     }
-
-     &__author{
-        width:40rem;
-        height:5rem;
-        align-self: flex-start;
-     }   
-
+     width:100%;
 
      &:focus{
-         border-radius: 2rem;
-         border: none;
-         background-color: $light-green;
-         outline: none;
+        background-color: $light-grey;
+        outline: none;
      }
-    
-        @include response(phone-moto){
-            width:20rem;
-            padding: 1.25rem 2rem;
-            }
-    
+
+  //    @include response(phone-moto){
+  //     width:100%;
+  //     padding: 1.25rem 2rem;
+  // }      
+      @include response(phone){
+        padding: 1.25rem 2rem;
+}      
+
+    //  @include response(tab-land){
+    //   width:70%;      
+    // }
+    // @include response(tab-port){
+    //   width:100%;
+    //   }            
+  
     }
-        @include response(phone){
-            align-items: flex-start;
-        }
-
+    @include response(phone){
+      width:90%;
+    }   
     
+    // &__title,
+    // &__author{
+    //     align-self: flex-start;
+    //  }
 
+     &__label{
+        font-size:2.5rem; 
+        margin-right: 1rem;
+     }
+
+
+}
+//reg form
+.regForm{
+    // margin: auto 10rem;
+    padding: 2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // width:40rem;
+
+    & > *{
+      font-size:2.5rem; 
+      
+      @include response(tab-port){
+        font-size:2rem;
+      }
+     
+      @include response(phone){
+        font-size:1.5rem;
+      }
+    }
+
+    &__formGroup{
+        display: flex;
+        flex-direction: column;
+    }
+
+      .email__input,
+      .pwd__input{ 
+          font-family: 'Amatic SC', cursive;
+          padding: 1rem 1.5rem;
+          margin-bottom: 1.5rem;
+          font-size: 3rem;
+          border: 1px solid $medium-grey;
+       
+          @include response(phone){
+              padding: 1rem;
+              font-size: 2.5rem;              
+              }
+      
+        }
 }
 

@@ -1,4 +1,18 @@
-<p>login works!</p>
-
+<section class="login-section">
+    <div class="secondary__heading u-center">Войти в свой профиль</div>
+    <form [formGroup]="loginForm" class="regForm" #f="ngForm" (ngSubmit)="onSubmit()">
+        <div class="regForm__formGroup">
+            <label for="email">Введите свой электронный адрес</label>
+            <input type="email" class = "email__input" placeholder="Your email" name="email" email required>
+            
+        </div>
+        <div class="regForm__formGroup">
+        <label for="password">Введите свой пароль</label>
+        <input type="password" class = "pwd__input" placeholder="Your password" name="password" required minlength="6">
+        
+        </div>
+        <button type="submit" class="btn" mat-raised-button color="primary" [disabled]="f.invalid">Войти</button>
+    </form>
+</section>
 
 <app-footer></app-footer>

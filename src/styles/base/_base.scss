@@ -21,6 +21,9 @@ html{
     @include response(phone){
         font-size: 44%; //1rem=7px 7px/16px=44% (360-600px)
     }
+    @include response(phone-moto){
+        font-size: 31%; //1rem=5px 5px/16px=31% (320px)
+    }
     @include response(big-desktop){//width> 1800px ?
         font-size: 75%; //1rem=12px 12/16=
     }

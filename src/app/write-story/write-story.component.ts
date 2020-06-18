@@ -26,7 +26,7 @@ export class WriteStoryComponent implements OnInit {
       author: new FormControl(""),
       title: new FormControl(""),
       content: new FormControl("", Validators.minLength(10)),
-      date: new FormControl(new Date()),
+      date: new FormControl(new Date())
     });
   }
 
@@ -35,8 +35,7 @@ export class WriteStoryComponent implements OnInit {
       author: new FormControl(""),
       title: new FormControl(""),
       content: new FormControl("", Validators.minLength(10)),
-      date: new FormControl(new Date()),
-
+      date: new FormControl(new Date())
     });
   }
 

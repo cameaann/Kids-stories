@@ -1,9 +1,7 @@
-// @import "abstracts/mixins";
 
 .header{
     background-color: $light-grey;
     padding: 2rem;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -13,21 +11,6 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-
-        
-
-    }
-
-    &__logobox{
-    
-    }
-
-    &__logo-link{
-    
-    }
-
-    &__blog-title{
-       
     }
 
     &__nav{
@@ -51,9 +34,7 @@
             a {
                 margin-right: 2.5rem;
                 }
-        }
-
-            
+        }            
     }
     @include response(tab-land){
         display: block;
@@ -61,14 +42,21 @@
         
 }
 .logo-img{
-    width:10rem;
-    height:10rem; 
+    width:15rem;
+    height:15rem;
+    margin-right: 20rem;
+
+    @include response(tab-land){
+        margin-right: 0;
+    }
 
     @include response(phone){
-        margin-right: 3rem;
+        margin-right: 1rem;
+        width:10rem;
+        height:10rem;
     }
-    @include response(moto-phone){
-        margin-right: 0;
+    @include response(phone-moto){
+        margin-right: 0rem;
     }
 }
 

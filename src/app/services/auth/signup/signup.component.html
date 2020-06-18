@@ -1,7 +1,15 @@
-<section>
-    <form>
-        <input type="email" placeholder="Your email" ngModel name="email" email required>
-        <input type="password" placeholder="Your password" required minlength="6">
+<section class="signup-section">
+    <div class="secondary__heading u-center">Создать нового читателя</div>
+    <form class="regForm" #f="ngForm" (ngSubmit)="onSubmit()">
+        <div class="regForm__formGroup">
+        <label for="email">Введите свой электронный адрес</label>
+        <input type="email" class = "email__input" placeholder="Your email" name="email" email required>
+        </div>
+        <div class="regForm__formGroup">
+        <label for="password">Введите свой пароль</label>
+        <input type="password" class = "pwd__input" placeholder="Your password" required minlength="6">
+        </div>
+        <button type="submit" class="btn" mat-raised-button color="primary" [disabled]="f.invalid">Создать</button>
     </form>
 </section>
 

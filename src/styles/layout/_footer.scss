@@ -1,0 +1,67 @@
+.footer{
+    background-color: $light-grey;
+    padding: 2rem;
+    color:$medium-grey2;
+    
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-flow: row-reverse;
+        align-items: center;
+
+        @include response(phone){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+
+    &__logo-img{
+        width:10rem;
+        height:10rem;
+    
+        @include response(phone){
+            width:5rem;
+            height:5rem;
+        }
+    }
+
+    &__copyright{
+        font-size: 2rem;
+    }
+
+    &__link{
+        font-size: 2rem;
+        text-decoration: none;
+        color:$medium-grey2;
+
+        &:hover{
+            color:$dark-grey;
+        }
+    }
+}
+
+.social{
+    list-style: none;
+    display: flex;
+
+    &__item{
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+
+    &__icon{
+        width:2.5rem;
+        height: 2.5rem;
+        fill:$medium-grey2;
+
+        @include response(phone){
+            width:1.5rem;
+            height:1.5rem;
+        }
+    }
+    
+}

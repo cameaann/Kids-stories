@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "abstracts/mixins";
 @import "abstracts/variables";
+@import "abstracts/utilities";
 
 @import "base/base.scss";
 @import "base/typography";
@@ -10,3 +11,4 @@
 @import "components/story.scss";
 
 @import "layout/header.scss";
+@import "layout/footer.scss";

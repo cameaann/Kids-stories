@@ -1,16 +1,25 @@
-.story{
-    font-size: 2.5rem;
-    margin-bottom: 10rem;
-    padding:2rem;
+.stories_container{
+    margin:auto 30rem;
 
-    // &:not(:last-child){
-        // border-bottom: 1px solid grey;
-    // }
-    
-    
-    &__title{
-        font-size: 2.8rem;
+    @include response(tab-land){
+        margin: auto 20rem;
     }
+
+    @include response(tab-port){
+        margin: auto 10rem;
+    }
+    @include response(phone){
+        margin: auto 2.5rem;
+    }
+
+
+}
+
+.story{
+    font-size: 3.5rem;
+    margin-top: 5rem;
+    padding:2rem;    
+    
 
     &__content{
         
@@ -23,7 +32,7 @@
     }
 
     @include response(tab-port){
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 2.5rem;
         margin-top: 2.5rem;
     }
